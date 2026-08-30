@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:AlwaysOnTopFiles}",
+            "name": "Debug WindowMirror",
+            "target": "WindowMirror",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug WindowMirror"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:AlwaysOnTopFiles}",
+            "name": "Release WindowMirror",
+            "target": "WindowMirror",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release WindowMirror"
+        }
+    ]
+}

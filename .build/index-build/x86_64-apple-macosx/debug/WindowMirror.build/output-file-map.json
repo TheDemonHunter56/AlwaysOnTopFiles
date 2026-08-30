@@ -1,0 +1,53 @@
+{
+  "": {
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/master.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swiftdeps"
+  },
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift": {
+    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.d",
+    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o",
+    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swiftdeps"
+  }
+}

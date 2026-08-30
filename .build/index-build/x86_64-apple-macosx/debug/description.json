@@ -1,0 +1,281 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.WindowMirror-x86_64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/sources",
+      "importPath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "WindowMirror",
+      "moduleOutputPath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule",
+      "objects" : [
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-Onone",
+        "-enable-testing",
+        "-j16",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "WindowMirror_main",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "alwaysontopfiles"
+      ],
+      "outputFileMapPath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift",
+        "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift"
+      ],
+      "tempsPath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "WindowMirror" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "WindowMirror",
+      "-package-name",
+      "alwaysontopfiles",
+      "-incremental",
+      "-c",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift",
+      "-I",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/Modules",
+      "-target",
+      "x86_64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-Onone",
+      "-enable-testing",
+      "-j16",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "WindowMirror_main",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "alwaysontopfiles",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "WindowMirror" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/WindowMirror.build/sources"
+    },
+    "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/index-build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+    }
+  }
+}

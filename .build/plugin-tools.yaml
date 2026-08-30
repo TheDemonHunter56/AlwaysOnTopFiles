@@ -1,0 +1,81 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "WindowMirror-x86_64-apple-macosx15.0-debug.exe": ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe>"]
+  "WindowMirror-x86_64-apple-macosx15.0-debug.module": ["<WindowMirror-x86_64-apple-macosx15.0-debug.module>"]
+  "main": ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe>","<WindowMirror-x86_64-apple-macosx15.0-debug.module>"]
+  "test": ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe>","<WindowMirror-x86_64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror":
+    is-mutated: true
+commands:
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror-entitlement.plist"]
+    description: "Write auxiliary file /Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror-entitlement.plist"
+
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/sources"]
+    description: "Write auxiliary file /Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/sources"
+
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.product/Objects.LinkFileList"
+
+  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<WindowMirror-x86_64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe>"]
+
+  "<WindowMirror-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule"]
+    outputs: ["<WindowMirror-x86_64-apple-macosx15.0-debug.module>"]
+
+  "C.WindowMirror-x86_64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.product/Objects.LinkFileList"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/WindowMirror"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug","-o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror","-module-name","WindowMirror","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_WindowMirror_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.product/Objects.LinkFileList","-target","x86_64-apple-macosx13.0","-Xlinker","-add_ast_path","-Xlinker","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.WindowMirror-x86_64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror-entitlement.plist"]
+    outputs: ["<WindowMirror-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/x86_64-apple-macosx/debug/WindowMirror"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror-entitlement.plist","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror"]
+
+  "C.WindowMirror-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/ContentView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/MirrorWindowController.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VideoOutput.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/VisibleWindow.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowCaptureManager.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/WindowMirrorApp.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/sources"]
+    outputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/ContentView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VideoOutput.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/VisibleWindow.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowCaptureManager.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/WindowMirrorApp.swift.o","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule"]
+    description: "Compiling Swift Module 'WindowMirror' (8 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","WindowMirror","-emit-dependencies","-emit-module","-emit-module-path","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/Modules/WindowMirror.swiftmodule","-output-file-map","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/output-file-map.json","-incremental","-c","@/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/sources","-I","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx13.0","-enable-batch-mode","-index-store-path","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j16","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","WindowMirror_main","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","alwaysontopfiles"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Package.swift","/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
