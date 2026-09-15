@@ -2,14 +2,15 @@ import SwiftUI
 import AVFoundation
 
 struct SampleBufferDisplayView: NSViewRepresentable {
+//NSViewRepresentable makes it so that you can use an NSView (appkit) with swiftUI
 
     let videoOutput: VideoOutput
 
-    func makeNSView(context: Context) -> NSView {
+    func makeNSView(context: Context) -> NSView { //this function call is required by NSViewRepresentable
 
-        let view = NSView()
+        let view = NSView() //creates the appkit view
 
-        let layer = AVSampleBufferDisplayLayer()
+        let layer = AVSampleBufferDisplayLayer() //object to display the video
 
         layer.videoGravity = .resizeAspect
 
@@ -29,7 +30,7 @@ struct SampleBufferDisplayView: NSViewRepresentable {
         return view
     }
 
-    func updateNSView(
+    func updateNSView( //another requirement of NSViewRepresentable
         _ nsView: NSView,
         context: Context
     ) {

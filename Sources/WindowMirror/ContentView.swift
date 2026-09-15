@@ -62,9 +62,8 @@ struct ContentView: View {
         } detail: {
             //These brackets define the main window
 
-            if let window = selectedWindow { //Happens when swift notices that selectedWindow changes value from nil to VisibleWindow
-
-                VStack(spacing: 20) {
+            if let window = selectedWindow { //Happens when swift notices that selectedWindow changes value from nil to VisibleWindow 
+               VStack(spacing: 20) {
 
                     Text(window.ownerName)
                         .font(.largeTitle)
@@ -74,6 +73,8 @@ struct ContentView: View {
                         .foregroundStyle(.secondary)
 
                     Button("Mirror Window") {
+
+                        manager.mirrorWindowController.selectedWindowBounds = window.bounds // passes bounds to the mirror window controller
 
                         Task {
                             do {

@@ -12,7 +12,7 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
     private var stream: SCStream? // The actual stream from ScreenCaptureKit
     // private so that ContentView can't access the stream directly
 
-    private let mirrorWindowController = MirrorWindowController()
+    public let mirrorWindowController = MirrorWindowController()
     // The mirroring window
 
     @Published var windows: [VisibleWindow] = [] 
@@ -50,7 +50,7 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
             else {
                 return nil
             }
-
+            
             let bounds = CGRect(
                 x: boundsDict["X"] as? CGFloat ?? 0, // ?? means instead of nil use 0
                 y: boundsDict["Y"] as? CGFloat ?? 0,
@@ -82,6 +82,8 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
             print("Couldn't find matching SCWindow")
             return
         } // guard block matches CoreGraphicsID to SCWindow. They're the same number, refer to the same thing, just different types
+
+        mirrorWindowController.selectedWindowBounds = window.frame // bounds passed to mirrorWindowController for initial window size
 
         print("Capturing:", window.title ?? "")
 

@@ -14,12 +14,6 @@
     "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController~partial.swiftmodule",
     "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/MirrorWindowController.swiftdeps"
   },
-  "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/PreviewView.swift": {
-    "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.d",
-    "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swift.o",
-    "swiftmodule": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView~partial.swiftmodule",
-    "swift-dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/PreviewView.swiftdeps"
-  },
   "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/Sources/WindowMirror/SampleBufferDisplayView.swift": {
     "dependencies": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.d",
     "object": "/Users/dimitrilesokhin/Documents/VSCode/AlwaysOnTopFiles/.build/x86_64-apple-macosx/debug/WindowMirror.build/SampleBufferDisplayView.swift.o",

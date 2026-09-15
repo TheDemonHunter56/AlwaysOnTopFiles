@@ -1,12 +1,18 @@
 import SwiftUI
-import AppKit
+import AppKit // provides NSWindow
 
 @MainActor // UI operations should be main actor
 final class MirrorWindowController {
 
-    private var window: NSWindow? // The window that is shown. Optional because at creation may not be a window yet
+    private var window: NSWindow? // The window that is shown. Optional because at object creation may not be a window yet
+    public var selectedWindowBounds: CGRect = CGRect(
+        x: 100,
+        y: 200,
+        width: 800,
+        height: 600
+    ) // reassigned from defafults in the windowCaptureManager
 
-    func show(videoOutput: VideoOutput) { // call this function to show the mirror window, passing in a videoOutput to display
+    func show(videoOutput: VideoOutput) { // call this function to create the mirror window, passing in a videoOutput to display
 
         if window == nil { // stops mirror windows from being created endlessly
 
@@ -17,22 +23,22 @@ final class MirrorWindowController {
             let hostingView = NSHostingView(
                 rootView: rootView // wraps a SampleBufferDisplayView in an NSHostingView, which can be displayed on a windoow
             )
-
+            print(selectedWindowBounds)
             let window = NSWindow(
                 contentRect: NSRect(
-                    x: 200,
-                    y: 200,
-                    width: 800,
-                    height: 600
+                    x: selectedWindowBounds.origin.x,
+                    y: selectedWindowBounds.origin.y,
+                    width: selectedWindowBounds.width,
+                    height: selectedWindowBounds.height
                 ),
-                styleMask: [
+                styleMask: [ //controls the window's behavior
                     .titled,
                     .closable,
                     .resizable,
                     .miniaturizable
                 ],
                 backing: .buffered,
-                defer: false
+                defer: false // create the window immediately rather than waiting
             )
 
             window.contentView = hostingView
@@ -48,12 +54,9 @@ final class MirrorWindowController {
 
             window.hasShadow = true
 
-            window.center()
-
             window.setFrameAutosaveName("Mirror")
 
             window.collectionBehavior = [
-                .canJoinAllSpaces,
                 .fullScreenAuxiliary
             ]
 
@@ -61,12 +64,11 @@ final class MirrorWindowController {
             window.titlebarAppearsTransparent = true
             window.isMovableByWindowBackground = true
 
-            window.isReleasedWhenClosed = false
+            window.isReleasedWhenClosed = false // Don't destroy the window object when user closes it so that window goes back to being nil instead of destroyed
 
             self.window = window
         }
 
-        window?.makeKeyAndOrderFront(nil)
+        window?.makeKeyAndOrderFront(nil) // Makes the window 'key' - gives it keyboard focus and brings it to the front
     }
-
 }
