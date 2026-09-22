@@ -47,6 +47,9 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
 
                 !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
 
+                title != "WindowMirror", // UI
+                title != "Window", // window created when streaming
+
                 let boundsDict = info[kCGWindowBounds as String] as? NSDictionary                
             else {
                 return nil

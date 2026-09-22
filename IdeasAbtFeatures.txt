@@ -1,9 +1,10 @@
-0) FIX BUG --> when app is launched and refresh buttons is pressed, if something is being mirrored
-then the mirroring window will pop up, and pressing that will freeze the current stream
-    SOLUTION --> don't let the mirroring window pop up
 1) allow windows from other desktops be mirrored (maybe)
 2) Make a refresh stream button in the ContentView
 3) Allow multiple mirroring windows
    --> eventually add a layering system based on macOS layers
 4) TRANSFER CLICKS - prob gonna involve some math with proportions
-5) When pressing Mirror Window, make it 'spawn' on top of the window its mirroring
+5) Repass selected window bounds after pressing refresh window
+    --> redo how windows are detected
+        I) Scan when launched
+        II) When another window is created, make a VisibleWindow of it and append to array of windows
+            a) When number of windows changes
