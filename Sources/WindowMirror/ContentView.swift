@@ -80,7 +80,7 @@ struct ContentView: View {
                             do {
 
                                 try await manager.startCapture(
-                                    windowID: window.windowID
+                                    windowID: window.id
                                 )
 
                             } catch {

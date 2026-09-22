@@ -22,7 +22,7 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
         // find all the on-screen windows, filter, and convert them into a VisibleWindow
         guard let windowList = CGWindowListCopyWindowInfo(
         // Guard means that the condition must be true before proceeding
-            [.optionOnScreenOnly],
+            [.optionOnScreenOnly], //.optionAll, .excludeDesktopElements, test them at home
             kCGNullWindowID // Don't restrict query to one window, give info on all windows
         ) as? [[String: Any]]
         else { // runs if as? [[String: Any]] returns nil
@@ -32,13 +32,14 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
 
         windows = windowList.compactMap { info in
         // compactMap transforms items. If item is nil, it gets discarded.
+        //loops through windowList, an array of dictionaries, each dictionary is a window
         // Info is the current window
             guard
                 let layer = info[kCGWindowLayer as String] as? Int, 
                 layer == 0,
                 // Get CoreGraphics layer and only continue if it is 0
 
-                let windowID = info[kCGWindowNumber as String] as? UInt32,
+                let id = info[kCGWindowNumber as String] as? UInt32,
 
                 let ownerName = info[kCGWindowOwnerName as String] as? String,
 
@@ -46,11 +47,13 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
 
                 !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
 
-                let boundsDict = info[kCGWindowBounds as String] as? NSDictionary
+                let boundsDict = info[kCGWindowBounds as String] as? NSDictionary                
             else {
                 return nil
             }
-            
+
+            print(layer, " ", id, " ", ownerName, " ", title, " ")
+
             let bounds = CGRect(
                 x: boundsDict["X"] as? CGFloat ?? 0, // ?? means instead of nil use 0
                 y: boundsDict["Y"] as? CGFloat ?? 0,
@@ -59,24 +62,24 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
             )
 
             return VisibleWindow(
-                id: windowID,
-                windowID: windowID,
+                id: id,
                 ownerName: ownerName,
                 title: title,
                 bounds: bounds
             )
         }
     }
+
     func startCapture(windowID: CGWindowID) async throws { // async means that it can do asynchronous things, throws means it can fail with an error
 
         if let stream = stream { // if capturing something, stop that first
             try? await stream.stopCapture() // try? means it can throw an error that is nil
         }
 
-        let shareableContent = try await SCShareableContent.current
+        let shareableContent = try await SCShareableContent.current.windows
         // returns an object with info abt what can be captured
 
-        guard let window = shareableContent.windows.first(
+        guard let window = shareableContent.first(
             where: { $0.windowID == windowID } // $0 means pass the first paramater of window into it
         ) else {
             print("Couldn't find matching SCWindow")
@@ -103,7 +106,7 @@ final class WindowCaptureManager: ObservableObject { //ObservableObject means th
         )
         // represents 1/60 seconds
 
-        configuration.pixelFormat = kCVPixelFormatType_32BGRA // 32 bits of 
+        configuration.pixelFormat = kCVPixelFormatType_32BGRA // 32 bits of BGRA
 
         let stream = SCStream(
             filter: filter,
