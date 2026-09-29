@@ -36,7 +36,7 @@ struct ContentView: View {
                     //Button {} label: {} makes the entire row into a button
 
                         selectedWindow = window //Assigns a value to selectedWindow, swift notices
-
+                        manager.mirrorWindowController.selectedWindowBounds = window.bounds // passes bounds to the mirror window controller
                     } label: {
                         //ask about this part
                         VStack(alignment: .leading, spacing: 4) {
@@ -53,7 +53,6 @@ struct ContentView: View {
 
                     }
                     .buttonStyle(.plain)
-
                 }
 
             }
@@ -73,8 +72,6 @@ struct ContentView: View {
                         .foregroundStyle(.secondary)
 
                     Button("Mirror Window") {
-
-                        manager.mirrorWindowController.selectedWindowBounds = window.bounds // passes bounds to the mirror window controller
 
                         Task {
                             do {
@@ -125,8 +122,8 @@ struct ContentView: View {
 
         }
         .frame( //Starting size of the detail
-            minWidth: 900,
-            minHeight: 700
+            minWidth: 400,
+            minHeight: 200
         )
         .onAppear { //Take an action before detail appears
 

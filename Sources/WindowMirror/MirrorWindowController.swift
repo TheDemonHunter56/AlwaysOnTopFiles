@@ -65,8 +65,17 @@ final class MirrorWindowController {
             window.isReleasedWhenClosed = false // Don't destroy the window object when user closes it so that window goes back to being nil instead of destroyed
 
             self.window = window
+        } else {
+            window?.setFrame(
+                NSRect(
+                    x: selectedWindowBounds.origin.x,
+                    y: selectedWindowBounds.origin.y,
+                    width: selectedWindowBounds.width,
+                    height: selectedWindowBounds.height
+                ),
+                display: true
+            )
         }
-
         window?.makeKeyAndOrderFront(nil) // Makes the window 'key' - gives it keyboard focus and brings it to the front
-    }
+    } 
 }
