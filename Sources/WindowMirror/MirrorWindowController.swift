@@ -54,6 +54,8 @@ final class MirrorWindowController {
 
             window.hasShadow = true
 
+            window.showsResizeIndicator = true
+
             window.collectionBehavior = [
                 .fullScreenAuxiliary
             ]
