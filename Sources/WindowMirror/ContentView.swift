@@ -3,75 +3,108 @@ import SwiftUI
 // The UI
 struct ContentView: View {
 
-    // Ask about the difference between a State and a StateObject
+    // Stores the WindowCaptureManager object.
+    // @StateObject tells SwiftUI that this View owns the object
+    // and should keep it alive while the View exists.
     @StateObject private var manager = WindowCaptureManager()
+
+    // Stores whichever window the user has currently selected.
+    // It starts as nil because no window is selected initially.
     @State private var selectedWindow: VisibleWindow?
 
-    var body: some View { // Body conforms to view, but is a ridiculously complicated view, so 'some' keyword abstracts that type
+    var body: some View {
 
-        NavigationSplitView { 
-        //Creates a split interface, sidebar and main window (main window called Detail)
-        // These brackets define the sidebar
+        VStack(spacing: 0) {
 
-            VStack { //Makes a vertical stack of elements
+            // MARK: Top Bar
 
-                HStack { //Makes a Horizontal stack of elements
+            HStack {
 
-                    Button("Refresh") { //Makes a button. Arg is text on the button
-                        manager.refreshWindows() //What the button does
-                    }
+                Text("\(manager.windows.count) windows")
+                    .foregroundStyle(.secondary)
+                    .font(.system(size: 11))
 
-                    Spacer() //creates FLEXIBLE empty space
+                Spacer()
 
-                    Text("\(manager.windows.count) windows") // Text shown
-                        .foregroundStyle(.secondary) // Modifier of the text
-
-                } //Overall, button on the left and text on the right. Spacer takes up empty space
-                .padding() //Adds padding to the HStack, can have 2 args for how much vertical or horizontal
-
-                List(manager.windows) { window in
-                // Makes a list from the list given (manager.windows)
-                    Button { 
-                    //Button("text"), is just that button. 
-                    //Button {} label: {} makes the entire row into a button
-
-                        selectedWindow = window //Assigns a value to selectedWindow, swift notices
-                        manager.mirrorWindowController.selectedWindowBounds = window.bounds // passes bounds to the mirror window controller
-                    } label: {
-                        //ask about this part
-                        VStack(alignment: .leading, spacing: 4) {
-                        
-                            Text(window.ownerName)
-                                .font(.headline)
-
-                            Text(window.title)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-
-                    }
-                    .buttonStyle(.plain)
+                Button {
+                    manager.refreshWindows()
+                } label: {
+                    Label("Refresh", systemImage: "arrow.clockwise")
                 }
-
+                .font(.system(size: 11))
             }
-            .navigationTitle("Windows")
+            .padding(.horizontal, 8)
+            .padding(.vertical, 6)
 
-        } detail: {
-            //These brackets define the main window
+            Divider()
 
-            if let window = selectedWindow { //Happens when swift notices that selectedWindow changes value from nil to VisibleWindow 
-               VStack(spacing: 20) {
+            // MARK: Window List
 
-                    Text(window.ownerName)
-                        .font(.largeTitle)
+            ScrollView {
+                VStack(spacing: 2) {
 
-                    Text(window.title)
-                        .font(.title3)
-                        .foregroundStyle(.secondary)
+                    ForEach(manager.windows) { window in
 
-                    Button("Mirror Window") {
+                        Button {
+
+                            // Select this window.
+                            selectedWindow = window
+
+                            // Give the mirror window controller
+                            // the bounds of the selected window.
+                            manager.mirrorWindowController.selectedWindowBounds = window.bounds
+
+                        } label: {
+
+                            VStack(alignment: .leading, spacing: 2) {
+
+                                // Name of the application that owns the window.
+                                Text(window.ownerName)
+                                    .font(.system(size: 13, weight: .medium))
+                                    .lineLimit(1)
+
+                                // Title of the window.
+                                Text(window.title)
+                                    .font(.system(size: 11))
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
+
+                            }
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment: .leading
+                            )
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 5)
+
+                            // Highlight the currently selected window.
+                            .background(
+                                selectedWindow == window
+                                    ? Color.accentColor.opacity(0.15)
+                                    : Color.clear
+                            )
+                            .clipShape(
+                                RoundedRectangle(cornerRadius: 5)
+                            )
+                        }
+                        .buttonStyle(.plain)
+                    }
+                }
+                .padding(6)
+            }
+
+            Divider()
+
+            // MARK: Mirror Button
+
+            VStack(spacing: 5) {
+
+                Button("Mirror Window") {
+
+                    // This can only be reached when a window
+                    // has been selected because the button is
+                    // disabled otherwise.
+                    if let window = selectedWindow {
 
                         Task {
                             do {
@@ -85,48 +118,35 @@ struct ContentView: View {
                                 print(error)
 
                             }
-
                         }
-
                     }
-                    .buttonStyle(.borderedProminent)
-
-                    Divider()
                 }
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity
-                )
+                .buttonStyle(.borderedProminent)
 
-            } else {
-
-                VStack(spacing: 20) {
-
-                    Image(systemName: "macwindow")
-                        .font(.system(size: 64))
-                        .foregroundStyle(.secondary)
-
-                    Text("No Window Selected")
-                        .font(.title)
-
-                    Text("Select a window from the list.")
-                        .foregroundStyle(.secondary)
-
-                }
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity
-                )
+                // Disable the button when no window is selected.
+                //
+                // selectedWindow == nil:
+                //      Button is disabled and appears grey.
+                //
+                // selectedWindow != nil:
+                //      Button is enabled and appears blue.
+                .disabled(selectedWindow == nil)
 
             }
-
+            .padding(.vertical, 7)
         }
-        .frame( //Starting size of the detail
-            minWidth: 400,
-            minHeight: 200
-        )
-        .onAppear { //Take an action before detail appears
 
+        // Compact initial window size.
+        .frame(
+            minWidth: 250,
+            idealWidth: 280,
+            minHeight: 250,
+            idealHeight: 350
+        )
+
+        .onAppear {
+
+            // Populate the window list when the UI first appears.
             manager.refreshWindows()
 
         }
