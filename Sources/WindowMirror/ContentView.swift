@@ -16,8 +16,6 @@ struct ContentView: View {
 
         VStack(spacing: 0) {
 
-            // MARK: Top Bar
-
             HStack {
 
                 Text("\(manager.windows.count) windows")
@@ -37,8 +35,6 @@ struct ContentView: View {
             .padding(.vertical, 6)
 
             Divider()
-
-            // MARK: Window List
 
             ScrollView {
                 VStack(spacing: 2) {
@@ -68,7 +64,6 @@ struct ContentView: View {
                                     .font(.system(size: 11))
                                     .foregroundStyle(.secondary)
                                     .lineLimit(1)
-
                             }
                             .frame(
                                 maxWidth: .infinity,
@@ -94,8 +89,6 @@ struct ContentView: View {
             }
 
             Divider()
-
-            // MARK: Mirror Button
 
             VStack(spacing: 5) {
 
@@ -131,15 +124,14 @@ struct ContentView: View {
                 // selectedWindow != nil:
                 //      Button is enabled and appears blue.
                 .disabled(selectedWindow == nil)
-
             }
             .padding(.vertical, 7)
         }
 
         // Compact initial window size.
         .frame(
-            minWidth: 250,
-            idealWidth: 280,
+            minWidth: 150,
+            idealWidth: 180,
             minHeight: 250,
             idealHeight: 350
         )
